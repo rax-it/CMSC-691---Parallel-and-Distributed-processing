@@ -1,0 +1,13 @@
+Output::
+[rave1@n003 hw2]$ mpirun -np 5 ques2.o
+I received: 2 , process ID: 1
+I received: 4 , process ID: 2
+I received: 16 , process ID: 3
+I received: 256 , process ID: 4
+X^16 = 65536
+
+I followed a devide and conquer, pipelined  approach in this question.
+Process 1 receives X from master process, and performs X*X
+Process 2 receives X^2 from process 1, and performs (X^2)*(X^2)
+
+This process continues when process 4 sends the output X^16 to master process which in return prints the value.

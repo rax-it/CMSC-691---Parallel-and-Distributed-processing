@@ -1,0 +1,55 @@
+Output:
+
+[rave1@n003 hw2]$ mpirun -np 10 sat.o
+9) 1110111110111001
+Count 0 pid 1
+Process 1 is done
+3) 1010111110011001
+4) 0110111110011001
+Count 1 pid 4
+Process 4 is done
+5) 1110111110011001
+5) 1010111111011001
+7) 1110111111011001
+7) 1010111110111001
+8) 0110111110111001
+Count 1 pid 8
+Process 8 is done
+Count 0 pid 0
+Process 0 is done
+Count 1 pid 9
+Process 9 is done
+Count 0 pid 2
+Process 2 is done
+Count 1 pid 3
+Process 3 is done
+Count 2 pid 5
+Process 5 is done
+Count 2 pid 7
+Process 7 is done
+6) 0110111111011001
+Count 1 pid 6
+Process 6 is done
+Total number of solutions: 9
+
+
+[rave1@n003 hw2]$ mpirun -np 3 sat.o
+0) 0110111110011001
+0) 1110111111011001
+0) 1010111110111001
+1) 1110111110011001
+1) 1010111111011001
+1) 0110111110111001
+2) 1010111110011001
+2) 0110111111011001
+2) 1110111110111001
+Count 3 pid 0
+Process 0 is done
+Total number of solutions: 9
+Count 3 pid 1
+Process 1 is done
+Count 3 pid 2
+Process 2 is done
+
+
+I implemented MPI_reduce to calculate the no. of times the output is found.

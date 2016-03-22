@@ -1,0 +1,35 @@
+1 a) 
+No. of processes    Execution time    epsilon = 0.00001
+	20				3.315 s
+	10				3.631 s
+	5				5.086 s
+	2 				12.797 s
+	1				21.278 s
+											epsilon
+	1				4.615 s						0.0001
+	1				0.750 s						0.001
+	
+	
+	Here we observe amdahl's law which says the decrease in execution time is limited by the code that cannot be parallelized.
+	We see execution time nears to 3.5 seconds and only shrinks marginally even though we are doubling the number of processes from 10 to 20.
+	
+	As we decrease the accuracy level (epsilon) time taken is decreased to find a solution that lies in given accuracy level.
+	
+  b)
+No. of processes    Execution time    epsilon = 0.00001
+	1				2m45.369s			
+	2				2m1.337s
+	5				0m36.638s
+	10				0m15.175s
+	20				0m8.727s
+											epsilon
+	20 				0m2.068s					0.0001
+	20 				0m1.561s					0.001
+	20				0m1.401s					0.01`
+	
+	
+	
+	This is same as the above observation so increase in speedup is limited by the serial code that cannot be parallelized.
+	Increasing no. of processes after a level will not decrease the time as it will add a lot of process communication overhead.
+	
+	As we decrease the accuracy level i.e. epsilon, time taken is decreased to find a solution that lies in given accuracy level.
